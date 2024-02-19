@@ -1,6 +1,5 @@
 // This will not be a model, but rather will be used as the reaction field's subdocument schema in the Thought model.
 
-
 const { Schema, Types } = require("mongoose");
 
 const reactionSchema = new Schema({
@@ -9,21 +8,19 @@ const reactionSchema = new Schema({
     default: () => new Types.ObjectId(),
   },
 
-  reactionBody:{
-    type:string,
-    required:true,
-    maxlength:280,
+  reactionBody: {
+    type: String,
+    required: true,
+    maxlength: 280,
   },
-  username:{
-    type:string,
-    required:true,
+  username: {
+    type: String,
+    required: true,
   },
-  createdAt:{
-    type:Date,
-    default:Date.now,
-  }
+  createdAt: {
+    type: Date,
+    default: Date.now,
+  },
 });
 
-module.exports=reactionSchema;
-
-
+module.exports = reactionSchema;

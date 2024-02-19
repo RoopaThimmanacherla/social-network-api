@@ -3,13 +3,13 @@ const { Schema, model } = require("mongoose");
 const userSchema = new Schema(
   {
     username: {
-      type: string,
+      type: String,
       unique: true,
       trimmed: true,
       required: true,
     },
     email: {
-      type: string,
+      type: String,
       unique: true,
       required: true,
       match: [/^([a-z0-9]+@[a-z]+\.[a-z]{2,3})$/],
@@ -20,7 +20,7 @@ const userSchema = new Schema(
     thoughts: [
       {
         type: Schema.Types.objectId,
-        ref: "Thought",
+        ref: "Thoughts",
       },
     ],
     //Array of _id values referencing the User model (self-reference)
