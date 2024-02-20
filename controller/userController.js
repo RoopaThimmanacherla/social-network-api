@@ -58,7 +58,7 @@ module.exports = {
         res.status(400).json({ message: "No user with this id!" });
       }
       await Thoughts.deleteMany({ _id: { $in: user.thoughts } });
-      res.json(200).json({ message: "User and thoughts are deleted" });
+      res.status(200).json({ message: "User and thoughts are deleted" });
     } catch (err) {
       res.status(500).json(err);
     }
@@ -96,6 +96,7 @@ module.exports = {
           .status(400)
           .json({ message: "user deleted but not found in any friendlists!" });
       }
+      res.status(200).json(updatedUser);
     } catch (err) {
       res.status(500).json(err);
     }
