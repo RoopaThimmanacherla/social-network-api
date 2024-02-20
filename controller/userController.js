@@ -50,7 +50,7 @@ module.exports = {
     }
   },
 
-  //delete user
+  //delete user and assosciated thoughts
   async deleteUser(req, res) {
     try {
       const user = await User.findOneAndRemove({ _id: req.params.userId });
@@ -64,7 +64,7 @@ module.exports = {
       res.status(500).json(err);
     }
   },
-  //   POST to add a new friend to a user's friend list /api/users/:userId/friends/:friendId
+  //   POST to add a new friend to a user's friend list
 
   async addFriend(req, res) {
     try {
