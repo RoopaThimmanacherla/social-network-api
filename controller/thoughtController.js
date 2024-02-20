@@ -75,9 +75,9 @@ module.exports = {
         { new: true }
       );
       if (!updateUser) {
-        res
-          .status(200)
-          .json({ message: "Thought is deleted but it is not embedded in the user" });
+        res.status(200).json({
+          message: "Thought is deleted but it is not embedded in the user",
+        });
       }
       res.status(200).json(updateUser);
     } catch (err) {
@@ -105,7 +105,7 @@ module.exports = {
     try {
       const thought = await Thoughts.findOneAndUpdate(
         { _id: req.params.thoughtId },
-        { $pull: { reactions: req.params.reactionId } },
+        { $pull: { reactions: { reactionId: req.params.reactionId } } },
         { runValidators: true, new: true }
       );
       if (!thought) {
