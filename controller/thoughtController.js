@@ -76,8 +76,8 @@ module.exports = {
       );
       if (!updateUser) {
         res
-          .status(400)
-          .json({ message: "Thought is not embedded in the user" });
+          .status(200)
+          .json({ message: "Thought is deleted but it is not embedded in the user" });
       }
       res.status(200).json(updateUser);
     } catch (err) {
