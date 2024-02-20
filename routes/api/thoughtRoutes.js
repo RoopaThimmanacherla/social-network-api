@@ -23,3 +23,5 @@ router.route("/:thoughtId/reactions").put(addReaction);
 // /api/thoughts/:thoughtId/reactions/:reactionId
 
 router.route("/:thoughtId/reactions/:reactionId").put(addReaction);
+
+module.exports = router;
