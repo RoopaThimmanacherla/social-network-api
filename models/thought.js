@@ -7,7 +7,7 @@ const thoughtSchema = new Schema(
       type: String,
       required: true,
       minlength: 1,
-      maxlwngth: 280,
+      maxlength: 280,
     },
 
     createdAt: {
@@ -16,7 +16,7 @@ const thoughtSchema = new Schema(
     },
 
     username: {
-      type: string,
+      type: String,
       required: true,
     },
 
