@@ -25,7 +25,7 @@ npm install
 
 [Github Repository](https://github.com/RoopaThimmanacherla/social-network-api)
 
-[walkThrough Video](https://drive.google.com/file/d/1ad71iFqDmMI0GObC_GOHQ3PVKHaZsmXA/view?usp=sharing)
+[walkThrough Video](https://drive.google.com/file/d/1ZbzHaQfLJwU5GteYQIJi-2f0TdIZd6l3/view)
 
 # References
 
